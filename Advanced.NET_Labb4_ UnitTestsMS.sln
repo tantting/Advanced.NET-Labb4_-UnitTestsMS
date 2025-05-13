@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced.NET_Labb4_ UnitTestsMS", "Advanced.NET_Labb4_ UnitTestsMS\Advanced.NET_Labb4_ UnitTestsMS.csproj", "{E0289664-E67D-400D-8BB9-66867AD30731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LS.Tests", "LS.Tests\LS.Tests.csproj", "{E0289664-E67D-400D-8BB9-66867AD30731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LS", "LS\LS.csproj", "{7718149B-02EE-4E41-A02E-BDF1CA50C2FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{E0289664-E67D-400D-8BB9-66867AD30731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0289664-E67D-400D-8BB9-66867AD30731}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0289664-E67D-400D-8BB9-66867AD30731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7718149B-02EE-4E41-A02E-BDF1CA50C2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7718149B-02EE-4E41-A02E-BDF1CA50C2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7718149B-02EE-4E41-A02E-BDF1CA50C2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7718149B-02EE-4E41-A02E-BDF1CA50C2FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

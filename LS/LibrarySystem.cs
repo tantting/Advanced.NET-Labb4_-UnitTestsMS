@@ -1,4 +1,4 @@
-namespace LibrarySystem;
+namespace LS;
 
 public class LibrarySystem
 {
@@ -20,6 +20,17 @@ public class LibrarySystem
 
     public bool AddBook(Book book)
     {
+        if (book == null)
+        {
+            throw new ArgumentException(nameof(book), "Book cannot be null");
+        }
+
+        bool duplicateIsbnExists = books.Any(existingBook => existingBook.ISBN == book.ISBN);
+
+        if (duplicateIsbnExists)
+        {
+            throw new ArgumentException("There is already a book in the system with this ISBN number"); 
+        }
         books.Add(book);
         return true;
     }
@@ -27,7 +38,7 @@ public class LibrarySystem
     public bool RemoveBook(string isbn)
     {
         Book book = SearchByISBN(isbn);
-        if (book != null)
+        if (book != null && book.IsBorrowed == false)
         {
             books.Remove(book);
             return true;
@@ -42,7 +53,7 @@ public class LibrarySystem
 
     public List<Book> SearchByTitle(string title)
     {
-        return books.Where(b => b.Title == title).ToList();
+        return books.Where(b => b.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
     }
 
     public List<Book> SearchByAuthor(string author)
@@ -68,6 +79,7 @@ public class LibrarySystem
         if (book != null && book.IsBorrowed)
         {
             book.IsBorrowed = false;
+            book.BorrowDate = null; 
             return true;
         }
         return false;

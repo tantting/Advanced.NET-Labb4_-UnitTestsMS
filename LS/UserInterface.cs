@@ -1,4 +1,4 @@
-namespace LibrarySystem;
+namespace LS;
 
 public class UserInterface
 {
